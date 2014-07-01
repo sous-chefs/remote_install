@@ -1,0 +1,15 @@
+name              'remote_install'
+maintainer        'Chef Software, Inc.'
+maintainer_email  'releng@getchef.com'
+license           'Apache 2.0'
+description       'Provides an opinionated way to download and install remote software'
+long_description  IO.read(File.join(File.dirname(__FILE__), 'README.md'))
+version           '1.0.0'
+
+supports 'centos'
+supports 'debian'
+supports 'fedora'
+supports 'freebsd'
+supports 'mac_os_x'
+supports 'ubuntu'
+supports 'windows'

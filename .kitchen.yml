@@ -1,0 +1,16 @@
+driver:
+  name: vagrant
+  customize:
+    cpus: 2
+    memory: 4096
+
+provisioner:
+  name: chef_zero
+  require_chef_omnibus: 11.12.8
+
+platforms:
+  - name: ubuntu-12.04
+
+suites:
+  - name: remote_install_test
+    run_list: remote_install_test::install

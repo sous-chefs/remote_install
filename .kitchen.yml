@@ -6,10 +6,16 @@ driver:
 
 provisioner:
   name: chef_zero
-  require_chef_omnibus: 11.12.8
 
 platforms:
+  - name: centos-6.7
+  - name: centos-7.1
   - name: ubuntu-12.04
+    run_list:
+      - recipe[apt::default]
+  - name: ubuntu-14.04
+    run_list:
+      - recipe[apt::default]
 
 suites:
   - name: remote_install_test

@@ -39,11 +39,11 @@ The `remote_install` resource has the following attributes:
 License & Authors
 -----------------
 - Author: Seth Vargo (<sethvargo@gmail.com>)
-- Author: Yvonne Lam (<yvonne@getchef.com>)
-- Author: Seth Chisamore (<schisamo@getchef.com>)
+- Author: Yvonne Lam (<yvonne@chef.io>)
+- Author: Seth Chisamore (<schisamo@chef.io>)
 
 ```text
-Copyright 2014, Chef Software, Inc. (<legal@getchef.com>)
+Copyright 2014, Chef Software, Inc. (<legal@chef.io>)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

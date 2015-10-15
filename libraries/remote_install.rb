@@ -1,4 +1,7 @@
 #
+# Cookbook Name:: remote_install
+# HWRP:: remote_install
+#
 # Copyright 2014, Chef Software, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -24,6 +27,7 @@ class Chef
     attribute :source,            kind_of: String, required: true
     attribute :version,           kind_of: String, required: true
     attribute :checksum,          kind_of: String, required: true
+    attribute :checksum_type,     kind_of: String, default: 'sha256'
     attribute :build_command,     kind_of: String
     attribute :compile_command,   kind_of: String
     attribute :install_command,   kind_of: String, required: true
@@ -31,6 +35,8 @@ class Chef
   end
 
   class Provider::RemoteInstall < Provider::LWRPBase
+
+    provides :remote_install
     class ChecksumVerificationFailure < RuntimeError
       def initialize(resource, actual)
         super <<-EOH
@@ -72,22 +78,22 @@ EOH
       @label ||= "#{name}[#{id}]"
     end
 
-    def tarball_name
-      @tarball_name ||= begin
-        if (tarball_extension = new_resource.source.match(/\.tgz|\.tar\.gz$/))
-          ::File.basename(new_resource.source, tarball_extension.to_s)
+    def tarball_extension
+      @tarball_extension ||= begin
+        if (tarball_extension = new_resource.source.match(/\.tar\.bz2|\.tgz|\.tar\.gz|\.tar$/))
+          tarball_extension.to_s
         else
-          id
+          '.tar.gz'
         end
       end
     end
 
     def cache_path
-      @cache_path ||= ::File.join(Config[:file_cache_path], "#{id}.tar.gz")
+      @cache_path ||= ::File.join(Config[:file_cache_path], "#{id}#{tarball_extension}")
     end
 
     def extract_path
-      @extract_path ||= ::File.join(Config[:file_cache_path], tarball_name)
+      @extract_path ||= ::File.join(Config[:file_cache_path], id)
     end
 
     def download
@@ -101,14 +107,22 @@ EOH
     def verify
       require 'digest/sha2' unless defined?(Digest::SHA256)
 
-      checksum = Digest::SHA256.file(cache_path).hexdigest
+      if new_resource.checksum_type == 'md5'
+        checksum = Digest::MD5.file(cache_path).hexdigest
+      elsif new_resource.checksum_type == 'sha256'
+        checksum = Digest::SHA256.file(cache_path).hexdigest
+      end
 
       fail ChecksumVerificationFailure.new(new_resource, checksum) unless new_resource.checksum == checksum
     end
 
     def extract
+      extract_command = 'tar -xv'
+      extract_command << 'z' if new_resource.source =~ /\.gz/
+      extract_command << 'j' if new_resource.source =~ /\.bz2/
+
       execute = Resource::Execute.new(label('extract'), run_context)
-      execute.command("tar -xzvf #{id}.tar.gz")
+      execute.command("#{extract_command} -f #{cache_path}")
       execute.cwd(Config[:file_cache_path])
       execute.run_action(:run)
     end

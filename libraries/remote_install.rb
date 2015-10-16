@@ -32,10 +32,11 @@ class Chef
     attribute :compile_command,   kind_of: String
     attribute :install_command,   kind_of: String, required: true
     attribute :environment,       kind_of: Hash,   default: {}
+    attribute :extract_basename,  kind_of: String,
+                                  default: lazy { |r| "#{r.name}-#{r.version}" }
   end
 
   class Provider::RemoteInstall < Provider::LWRPBase
-
     provides :remote_install
     class ChecksumVerificationFailure < RuntimeError
       def initialize(resource, actual)
@@ -93,7 +94,7 @@ EOH
     end
 
     def extract_path
-      @extract_path ||= ::File.join(Config[:file_cache_path], id)
+      @extract_path ||= ::File.join(Config[:file_cache_path], new_resource.extract_basename)
     end
 
     def download

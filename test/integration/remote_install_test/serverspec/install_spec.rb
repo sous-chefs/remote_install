@@ -1,10 +1,9 @@
 require 'serverspec'
 
-include Serverspec::Helper::Exec
-include Serverspec::Helper::DetectOS
+set :backend, :exec
 
 describe 'bash' do
   describe command('/usr/local/bin/bash --version') do
-    it { should return_stdout(/4\.3/) }
+    its(:stdout) { should match /4\.3/ }
   end
 end

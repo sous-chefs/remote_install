@@ -1,5 +1,8 @@
 include_recipe 'build-essential::default'
 
+# TODO: the `remote_install` provider should handle this
+package 'tar' if platform_family?('rhel')
+
 remote_install 'bash' do
   source 'http://ftp.gnu.org/gnu/bash/bash-4.3.tar.gz'
   version '4.3'

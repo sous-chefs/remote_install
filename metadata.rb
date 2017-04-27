@@ -1,6 +1,6 @@
 name              'remote_install'
 maintainer        'Chef Software, Inc.'
-maintainer_email  'releng@chef.io'
+maintainer_email  'cookbooks@chef.io'
 license           'Apache-2.0'
 description       'Provides an opinionated way to download and install remote software'
 long_description  IO.read(File.join(File.dirname(__FILE__), 'README.md'))

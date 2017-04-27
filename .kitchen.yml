@@ -1,22 +1,20 @@
 driver:
   name: vagrant
-  customize:
-    cpus: 2
-    memory: 4096
 
 provisioner:
   name: chef_zero
+  deprecations_as_errors: true
 
 platforms:
-  - name: centos-6.7
-  - name: centos-7.1
-  - name: ubuntu-12.04
-    run_list:
-      - recipe[apt::default]
+  - name: centos-6.8
+  - name: centos-7.3
+  - name: debian-7.11
+  - name: debian-8.7
+  - name: fedora-25
+  - name: opensuse-leap-42.2
   - name: ubuntu-14.04
-    run_list:
-      - recipe[apt::default]
+  - name: ubuntu-16.04
 
 suites:
-  - name: remote_install_test
-    run_list: remote_install_test::install
+  - name: default
+    run_list: test::install

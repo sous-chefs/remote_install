@@ -17,5 +17,6 @@ supports 'mac_os_x'
 supports 'ubuntu'
 supports 'windows'
 
-source_url 'https://github.com/chef-cookbooks/remote_install' if respond_to?(:source_url)
-issues_url 'https://github.com/chef-cookbooks/remote_install/issues' if respond_to?(:issues_url)
+source_url 'https://github.com/chef-cookbooks/remote_install'
+issues_url 'https://github.com/chef-cookbooks/remote_install/issues'
+chef_version '>= 12.5' if respond_to?(:chef_version)

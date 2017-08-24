@@ -13,12 +13,11 @@ Provides a highly-opinionated way to download, extract, and compile software fro
 
 ### Chef
 
-- Chef 12.5+
+- Chef 12.7+
 
 ### Cookbooks
 
 - none
-
 
 ## Usage
 
@@ -46,11 +45,11 @@ Attribute         | Description
 `install_command` | the command to "install"
 `environment`     | the environment to set while building
 
-## License & Authors
+## Maintainers
 
-- Author: Seth Vargo ([sethvargo@gmail.com](mailto:sethvargo@gmail.com))
-- Author: Yvonne Lam ([yvonne@chef.io](mailto:yvonne@chef.io))
-- Author: Seth Chisamore ([schisamo@chef.io](mailto:schisamo@chef.io))
+This cookbook is maintained by Chef's Community Cookbook Engineering team. Our goal is to improve cookbook quality and to aid the community in contributing to cookbooks. To learn more about our team, process, and design goals see our [team documentation](https://github.com/chef-cookbooks/community_cookbook_documentation/blob/master/COOKBOOK_TEAM.MD). To learn more about contributing to cookbooks like this see our [contributing documentation](https://github.com/chef-cookbooks/community_cookbook_documentation/blob/master/CONTRIBUTING.MD), or if you have general questions about this cookbook come chat with us in #cookbok-engineering on the [Chef Community Slack](http://community-slack.chef.io/)
+
+## License
 
 ```text
 Copyright 2014-2017, Chef Software, Inc. (<legal@chef.io>)

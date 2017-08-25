@@ -1,4 +1,4 @@
-name 'remote_install_test'
+name 'test'
 version '1.0.0'
 
 depends 'build-essential'

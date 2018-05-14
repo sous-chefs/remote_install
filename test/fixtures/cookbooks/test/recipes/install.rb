@@ -1,4 +1,4 @@
-include_recipe 'build-essential::default'
+build_essential 'install compilation tools'
 
 # TODO: the `remote_install` provider should handle this
 package 'tar' if platform_family?('rhel')

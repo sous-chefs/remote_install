@@ -84,7 +84,7 @@ action_class do
       checksum = Digest::SHA256.file(cache_path).hexdigest
     end
 
-    unless new_resource.checksum == checksum # rubocop: disable Style/GuardClause
+    unless new_resource.checksum == checksum
       raise <<-EOH
 Verification for #{resource} failed due to a checksum mismatch:
 

@@ -95,7 +95,7 @@ This added security check is used to prevent MITM attacks when downloading the
 remote file. If you have updated the version or URL for the download, you will
 also need to update the checksum value. You can find the checksum value on the
 software publishers website.
-EOH
+      EOH
     end
   end
 

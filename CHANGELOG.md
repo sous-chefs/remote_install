@@ -24,4 +24,11 @@ v1.0.1
 
 v1.0.0
 ------
+## Unreleased
+
+- resolved cookstyle error: metadata.rb:6:1 refactor: `ChefRedundantCode/LongDescriptionMetadata`
+- resolved cookstyle error: metadata.rb:22:1 refactor: `ChefModernize/RespondToInMetadata`
+- resolved cookstyle error: resources/remote_install.rb:5:1 refactor: `ChefStyle/CommentFormat`
+- resolved cookstyle error: test/fixtures/cookbooks/test/metadata.rb:4:1 refactor: `ChefModernize/UnnecessaryDependsChef14`
+
 - Initial public release

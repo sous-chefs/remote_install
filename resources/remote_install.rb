@@ -86,9 +86,9 @@ action_class do
 
     unless new_resource.checksum == checksum
       raise <<-EOH
-Verification for #{resource} failed due to a checksum mismatch:
+Verification for #{new_resource} failed due to a checksum mismatch:
 
-  expected: #{resource.checksum}
+  expected: #{new_resource.checksum}
   actual:   #{actual}
 
 This added security check is used to prevent MITM attacks when downloading the

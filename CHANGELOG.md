@@ -5,6 +5,7 @@ This file is used to list changes made in each version of the remote_install coo
 ## Unreleased
 
 - Sous Chefs Adoption
+- Fix inspec tests
 - resolved cookstyle error: metadata.rb:6:1 refactor: `ChefRedundantCode/LongDescriptionMetadata`
 - resolved cookstyle error: metadata.rb:22:1 refactor: `ChefModernize/RespondToInMetadata`
 - resolved cookstyle error: resources/remote_install.rb:5:1 refactor: `ChefStyle/CommentFormat`

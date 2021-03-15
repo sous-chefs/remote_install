@@ -1,6 +1,13 @@
-remote_install Cookbook CHANGELOG
-=================================
+# remote_install Cookbook CHANGELOG
+
 This file is used to list changes made in each version of the remote_install cookbook.
+
+## Unreleased
+
+- Sous Chefs Adoption
+- Fix inspec tests
+- Various CookStyle fixes
+- Initial public release
 
 ## 2.0.0 (2017-08-25)
 
@@ -13,22 +20,13 @@ This file is used to list changes made in each version of the remote_install coo
 - Fix how specs set the platform and remove report at end
 - Convert to a custom resource and require Chef 12.7+
 
-v1.0.2
-------
+## v1.0.2
+
 - the -v flag for tar is unsupported on older and bsd versions of tar, which is an issue on older platforms
 
-v1.0.1
-------
+## v1.0.1
+
 - Compute extract path basename based on tarball name.  Add md5 support.
 - Allow the basename of extracted directory to be specified.
 
-v1.0.0
-------
-## Unreleased
-
-- resolved cookstyle error: metadata.rb:6:1 refactor: `ChefRedundantCode/LongDescriptionMetadata`
-- resolved cookstyle error: metadata.rb:22:1 refactor: `ChefModernize/RespondToInMetadata`
-- resolved cookstyle error: resources/remote_install.rb:5:1 refactor: `ChefStyle/CommentFormat`
-- resolved cookstyle error: test/fixtures/cookbooks/test/metadata.rb:4:1 refactor: `ChefModernize/UnnecessaryDependsChef14`
-
-- Initial public release
+## v1.0.0

@@ -2,6 +2,8 @@
 
 This file is used to list changes made in each version of the remote_install cookbook.
 
+## Unreleased
+
 ## 2.1.2 - *2021-03-25*
 
 - Fix Changelog formatting issue

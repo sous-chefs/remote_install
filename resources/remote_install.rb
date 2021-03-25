@@ -50,13 +50,11 @@ action_class do
   end
 
   def tarball_extension
-    @tarball_extension ||= begin
-      if (tarball_extension = new_resource.source.match(/\.tar\.bz2|\.tgz|\.tar\.gz|\.tar$/))
-        tarball_extension.to_s
-      else
-        '.tar.gz'
-      end
-    end
+    @tarball_extension ||= if (tarball_extension = new_resource.source.match(/\.tar\.bz2|\.tgz|\.tar\.gz|\.tar$/))
+                             tarball_extension.to_s
+                           else
+                             '.tar.gz'
+                           end
   end
 
   def cache_path

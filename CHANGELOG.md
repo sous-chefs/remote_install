@@ -4,6 +4,13 @@ This file is used to list changes made in each version of the remote_install coo
 
 ## Unreleased
 
+- resolved cookstyle error: resources/remote_install.rb:53:28 convention: `Style/RedundantBegin`
+- resolved cookstyle error: resources/remote_install.rb:54:9 convention: `Layout/IndentationWidth`
+- resolved cookstyle error: resources/remote_install.rb:55:7 convention: `Layout/ElseAlignment`
+- resolved cookstyle error: resources/remote_install.rb:56:9 convention: `Layout/IndentationWidth`
+- resolved cookstyle error: resources/remote_install.rb:57:7 warning: `Layout/EndAlignment`
+- resolved cookstyle error: resources/remote_install.rb:58:1 convention: `Layout/EmptyLinesAroundMethodBody`
+- resolved cookstyle error: resources/remote_install.rb:58:1 convention: `Layout/TrailingWhitespace`
 ## 2.1.0 - *2021-03-15*
 
 - Sous Chefs Adoption

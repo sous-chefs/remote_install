@@ -4,6 +4,7 @@ This file is used to list changes made in each version of the remote_install coo
 
 ## Unreleased
 
+- resolved cookstyle error: resources/remote_install.rb:1:1 refactor: `Chef/Deprecations/ResourceWithoutUnifiedTrue`
 ## 2.1.2 - *2021-03-25*
 
 - Fix Changelog formatting issue

@@ -4,7 +4,11 @@ This file is used to list changes made in each version of the remote_install coo
 
 ## Unreleased
 
+- Standardise files with files in sous-chefs/repo-management
+
 ## 2.1.3 - *2021-06-01*
+
+- Standardise files with files in sous-chefs/repo-management
 
 ## 2.1.2 - *2021-03-25*
 

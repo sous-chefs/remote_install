@@ -18,6 +18,7 @@
 #
 
 provides :remote_install
+unified_mode true
 
 property :source,            String, required: true
 property :version,           String, required: true

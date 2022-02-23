@@ -2,7 +2,7 @@
 
 This file is used to list changes made in each version of the remote_install cookbook.
 
-## Unreleased
+## 3.0.0 - *2022-02-23*
 
 - resolved cookstyle error: resources/remote_install.rb:1:1 refactor: `Chef/Deprecations/ResourceWithoutUnifiedTrue`
 - Require unified_mode for Chef 18 support

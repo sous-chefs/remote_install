@@ -30,7 +30,7 @@ property :install_command,   String, required: true
 property :environment,       Hash,   default: {}
 property :extract_basename,  String, default: lazy { |r| "#{r.name}-#{r.version}" }
 
-action(:install) do
+action :install do
   converge_by("Install #{new_resource}") do
     download
     verify

@@ -4,6 +4,11 @@ This file is used to list changes made in each version of the remote_install coo
 
 ## Unreleased
 
+- resolved cookstyle error: resources/remote_install.rb:1:1 refactor: `Chef/Deprecations/ResourceWithoutUnifiedTrue`
+- Require unified_mode for Chef 18 support
+- Require Chef 15.3. for unified_mode support
+- Use shared GitHub Actions workflow
+
 ## 2.1.5 - *2022-02-08*
 
 - Remove delivery folder

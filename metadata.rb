@@ -6,7 +6,7 @@ description       'Provides an opinionated way to download and install remote so
 version           '2.1.5'
 source_url        'https://github.com/sous-chefs/remote_install'
 issues_url        'https://github.com/sous-chefs/remote_install/issues'
-chef_version      '>= 12.7'
+chef_version      '>= 15.3'
 
 supports 'centos'
 supports 'debian'

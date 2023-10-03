@@ -2,7 +2,7 @@
 
 This file is used to list changes made in each version of the remote_install cookbook.
 
-## Unreleased
+## 3.0.1 - *2023-10-03*
 
 - Fix markdown formatting in the README
 

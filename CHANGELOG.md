@@ -4,6 +4,8 @@ This file is used to list changes made in each version of the remote_install coo
 
 ## Unreleased
 
+- Fix markdown formatting in the README
+
 ## 3.0.0 - *2022-02-23*
 
 - resolved cookstyle error: resources/remote_install.rb:1:1 refactor: `Chef/Deprecations/ResourceWithoutUnifiedTrue`

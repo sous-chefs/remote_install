@@ -2,7 +2,7 @@
 
 This file is used to list changes made in each version of the remote_install cookbook.
 
-## Unreleased
+## 3.0.4 - *2025-09-04*
 
 ## 3.0.3 - *2024-05-02*
 

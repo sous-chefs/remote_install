@@ -2,6 +2,13 @@
 
 This file is used to list changes made in each version of the remote_install cookbook.
 
+## [3.0.5](https://github.com/sous-chefs/remote_install/compare/3.0.4...v3.0.5) (2025-10-16)
+
+
+### Bug Fixes
+
+* **ci:** Update workflows to use release pipeline ([#48](https://github.com/sous-chefs/remote_install/issues/48)) ([1328644](https://github.com/sous-chefs/remote_install/commit/132864464b8f3b0e026915bd9c3205645f4c786c))
+
 ## 3.0.1 - *2023-10-03*
 
 * Fix markdown formatting in the README

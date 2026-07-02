@@ -1,7 +1,7 @@
 build_essential 'install compilation tools'
 
 # TODO: the `remote_install` provider should handle this
-package 'tar' if platform_family?('rhel')
+package 'tar' if platform_family?('amazon', 'rhel')
 
 remote_install 'bash' do
   source 'http://ftp.gnu.org/gnu/bash/bash-4.3.tar.gz'
@@ -10,4 +10,5 @@ remote_install 'bash' do
   build_command './configure'
   compile_command 'make'
   install_command 'make install'
+  environment 'CFLAGS' => '-std=gnu89'
 end

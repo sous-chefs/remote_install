@@ -26,15 +26,17 @@ jobs:
     strategy:
       matrix:
         os:
-          - amazonlinux-2
-          - centos-7
-          - centos-8
-          - debian-9
-          - debian-10
-          - ubuntu-1804
-          - ubuntu-2004
+          - almalinux-8
+          - almalinux-9
+          - amazonlinux-2023
+          - debian-12
           - fedora-latest
-          - opensuse-leap
+          - opensuse-leap-15
+          - oraclelinux-8
+          - oraclelinux-9
+          - rockylinux-8
+          - rockylinux-9
+          - ubuntu-22.04
         suite:
           - "default"
       fail-fast: false

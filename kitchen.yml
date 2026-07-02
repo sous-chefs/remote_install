@@ -2,9 +2,10 @@ driver:
   name: vagrant
 
 provisioner:
-  name: chef_zero
+  name: chef_infra
   chef_license: accept
   deprecations_as_errors: true
+  policyfile: Policyfile.rb
 
 platforms:
   - name: amazonlinux-2
@@ -19,4 +20,5 @@ platforms:
 
 suites:
   - name: default
-    run_list: test::install
+    provisioner:
+      named_run_list: default
